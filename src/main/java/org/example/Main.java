@@ -21,7 +21,6 @@ public class Main {
             wednesday.setNight(false);
 
             try {
-                //System.out.println("sleep");
                 Thread.sleep(100L);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
@@ -33,7 +32,6 @@ public class Main {
             wednesday.setNight(true);
 
             try {
-                //System.out.println("sleep");
                 Thread.sleep(100L);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
@@ -48,7 +46,6 @@ public class Main {
         int worldArmy = world.createRobots();
         int wednesdayArmy = wednesday.createRobots();
 
-        //battle
         if (worldArmy > wednesdayArmy) {
             System.out.println("World win");
         }
