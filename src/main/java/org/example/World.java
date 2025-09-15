@@ -20,7 +20,6 @@ public class World implements Runnable, Faction {
     public void takeRobotPart(Factory factory) {
         RobotPart newPart = factory.giveRobotPart(this);
         if(newPart == null) {
-//            System.out.println("New Robot Part is Null");
             return;
         }
         String name = newPart.getPartName();
@@ -47,7 +46,6 @@ public class World implements Runnable, Faction {
     public void run() {
         while (!Thread.interrupted()) {
             if (isNight) {
-//                System.out.println("world is Night");
                 takeRobotPart(factory);
             } else {
                 try {

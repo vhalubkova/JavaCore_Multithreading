@@ -52,11 +52,9 @@ public class Factory implements Runnable {
     public synchronized RobotPart giveRobotPart(Faction faction) {
         boolean is = isNight;
         if (!isNight) {
-//            System.out.println("give: is NOT Night");
             return null;
         }
         if (store.isEmpty()) {
-//            System.out.println("give: is empty");
             return null;
         }
         if (!counter.containsKey(faction)) {
@@ -68,7 +66,6 @@ public class Factory implements Runnable {
             counter.put(faction, counter.get(faction) + 1);
         }
 
-        //System.out.println("give last");
         RobotPart part = store.getLast();
         store.remove(part);
 
@@ -84,7 +81,6 @@ public class Factory implements Runnable {
                 try {
                     Thread.sleep(5L);
                 } catch (InterruptedException e) {
-//                    throw new RuntimeException(e);
                     break;
                 }
 
